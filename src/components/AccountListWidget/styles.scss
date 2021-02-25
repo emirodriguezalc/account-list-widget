@@ -1,8 +1,82 @@
-.account-list-widget-wrapper {
-  width: 80vw;
-  height: 20vh;
-  border: 1px solid black;
+.widget-wrapper {
   display: flex;
-  flex-direction: row;
-  margin: 1em 0;
+  flex-direction: column;
+  width: 90vw;
+  min-height: 10vh;
+  border: 1px solid black;
+  border-radius: 5px;
+  align-items: center;
+  max-width: 500px;
+  margin: 1rem 0;
+  background-color: white;
+}
+
+.widget-mininfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.widget-addinfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.widget-addinfo-row {
+  width: 100%;
+  background-color: lightgray;
+}
+
+.widget-addinfo-title {
+  font-size: 0.9rem;
+  margin: 0.5rem 0.5rem 0.5rem 1rem;
+  font-weight: 400;
+}
+
+.widget-addinfo-data {
+  font-size: 0.9rem;
+  margin: 0 0.5rem 0.5rem 1rem;
+}
+
+.widget-img {
+  width: 25vw;
+  height: fit-content;
+  margin: 1rem;
+  max-width: 50px;
+}
+
+.widget-info {
+  font-size: 0.9rem;
+  margin: 0.5rem;
+}
+
+.widget-info:nth-child(even) {
+  margin-top: 0;
+}
+
+.widget-info-title {
+  font-size: 0.8rem;
+  margin: 1rem 1rem 0 1rem;
+  font-weight: 400;
+}
+
+.widget-balance {
+  font-size: 0.9rem;
+  margin: 1rem;
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.widget-arrow {
+  width: 5vw;
+  height: fit-content;
+  margin-right: 1rem;
+  max-width: 20px;
+}
+
+.arrow-true {
+  transform: rotate(180deg);
 }
