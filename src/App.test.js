@@ -69,7 +69,7 @@ const accountList = [
   }
 ];
 
-test('renders correct amount of widgets', () => {
+test('renders correct number of widgets', () => {
   const {container} = render(<App />)
   expect(container.firstChild.children.length).toEqual(accountList.length)
 });

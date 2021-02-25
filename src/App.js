@@ -1,5 +1,5 @@
 import './App.css';
-import AccountListWidget from './components/AccountListWidget/AccountListWidget'
+import AccountListWidget from './components/AccountListWidget/AccountListWidget';
 
 function App() {
   const accountList = [
@@ -73,14 +73,14 @@ function App() {
   return (
     <div className="App">
       {
-        accountList.map((el) => {
+        accountList.map((accountItem) => {
           return (
-            <AccountListWidget data={el} />
-          )
+            <AccountListWidget data={accountItem} />
+          );
         })
-      }
+      };
     </div>
   );
-}
+};
 
 export default App;
