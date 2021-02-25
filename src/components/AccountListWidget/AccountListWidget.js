@@ -3,7 +3,7 @@ import './styles.scss'
 
 const AccountListWidget = ({ data }) => {
   return (
-    <div className="account-list-widget-wrapper">
+    <div className="account-list-widget-wrapper" key={data.accountNumber}>
       <h1>icon</h1>
       <section>
         <h2>{data.accountName}</h2>
