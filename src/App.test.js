@@ -81,12 +81,12 @@ import App from './App';
   expect(fetch).toHaveBeenCalledTimes(1);
 }); 
 
-test('renders spinner when data is not there yet', () => {
+test('renders spinner when data is not there yet', async() => {
   global.fetch = jest.fn(() => (
     Promise.resolve({
       json: () => Promise.resolve(null)
     })
   ))
-  render(<App />)
-  expect(screen.getByText('Spinner')).toBeInTheDocument();
+  const { container } = await render(<App />)
+  expect(container.firstChild.children[0]).toHaveClass('spinner-container');
 });
