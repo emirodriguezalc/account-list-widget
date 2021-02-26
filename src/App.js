@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
 import AccountListWidget from './components/AccountListWidget/AccountListWidget';
+import Spinner from './components/Spinner/Spinner';
 
 const App = () => {
   const [accountList, setAccountList] = useState(null);
@@ -10,7 +11,7 @@ const App = () => {
       .then(res => res.json())
       .then(data => setAccountList(data))
       .catch(err => console.log(err));
-  })
+  }, [])
   return (
     <div className="App">
       <>
@@ -20,9 +21,9 @@ const App = () => {
               <AccountListWidget data={accountItem} />
             );
           })
-        };
+        }
         {
-          !accountList && <h1>Spinner</h1>
+          !accountList && <Spinner />
         }
       </>
     </div>
