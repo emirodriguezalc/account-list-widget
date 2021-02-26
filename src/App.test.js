@@ -1,7 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-
   test('renders correct number of widgets when data', async() => {
   const accountList = [
     {
