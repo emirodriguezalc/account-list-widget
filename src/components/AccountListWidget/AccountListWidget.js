@@ -13,7 +13,7 @@ const AccountListWidget = ({ data }) => {
   return (
     <div className="widget-wrapper" key={data.accountNumber} onClick={handleClick}>
       <section className="widget-mininfo">
-        <IconMatcher data={data.accountName}/>
+        <IconMatcher data={data.accountName} />
         <section>
           <h2 className="widget-info">{data.accountName}</h2>
           <h2 className="widget-info">{data.accountNumber}</h2>
