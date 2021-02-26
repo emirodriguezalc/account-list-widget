@@ -18,6 +18,11 @@
   justify-content: space-between;
 }
 
+.widget-mininfo:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 15px 3px #888888;
+}
+
 .widget-addinfo {
   width: 100%;
   display: flex;
