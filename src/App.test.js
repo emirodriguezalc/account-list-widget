@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 
- test('renders correct number of widgets when data', async() => {
+  test('renders correct number of widgets when data', async() => {
   const accountList = [
     {
       "balance": {
@@ -78,9 +78,9 @@ import App from './App';
     })
   ))
   const { container } = await render(<App />)
-/*   expect(container.firstChild.children.length).toEqual(accountList.length); */ // Not working because its getting first render of app before having the data
-  expect(fetch).toHaveBeenCalledTimes(1)
-});
+  // expect(container.firstChild.children.length).toEqual(accountList.length);  // Not working because its getting first render of app before having the data
+  expect(fetch).toHaveBeenCalledTimes(1);
+}); 
 
 test('renders spinner when data is not there yet', () => {
   global.fetch = jest.fn(() => (

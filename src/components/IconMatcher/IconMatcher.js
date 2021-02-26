@@ -5,23 +5,26 @@ import money from '../../assets/money.png';
 import investment from '../../assets/profits.png';
 
 const IconMatcher = ({ data }) => {
-  const [icon, setIcon] = useState(money)
+  const [icon, setIcon] = useState({})
 
   useEffect(() => {
     if (data.search(/card/gi) !== -1) {
-      setIcon(card)
+      setIcon({ url: card, name: 'card' })
     }
 
-    if (data.search(/home/gi) !== -1) {
-      setIcon(loan)
+    else if (data.search(/loan/gi) !== -1) {
+      setIcon({ url: loan, name: 'loan' })
     }
 
-    if (data.search(/investment/gi) !== -1) {
-      setIcon(investment)
+    else if (data.search(/investment/gi) !== -1) {
+      setIcon({ url: investment, name: 'investment' })
     }
-  })
-
-  return (<img className="widget-img" src={icon} alt="Money"></img>)
+    else {
+      setIcon({ url: money, name: 'money' })
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+  return (<img className={`widget-img ${icon.name}`} src={icon.url} alt={icon.name}></img>)
 };
 
 export default IconMatcher;
